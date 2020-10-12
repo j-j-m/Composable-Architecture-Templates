@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A Composable Architecture component.</string>
+	<key>Summary</key>
+	<string>A Composable Architecture component.</string>
+	<key>SortOrder</key>
+	<string>2</string>
+	<key>DefaultCompletionName</key>
+	<string>MyComponent</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>Component</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Name</key>
+			<string>Component Name:</string>
+			<key>Description</key>
+			<string>The name of the component to create</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>includeView</string>
+			<key>Name</key>
+			<string>Also create view for the component</string>
+			<key>Description</key>
+			<string>Whether to create a view for the component</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>viewTechnology</string>
+			<key>Name</key>
+			<string>View Implementation:</string>
+			<key>Description</key>
+			<string>The view implementation technology</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>SwiftUI</string>
+			<key>Values</key>
+			<array>
+				<string>SwiftUI</string>
+				<string>UIKit</string>
+			</array>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>includeView</key>
+				<array>
+					<string>true</string>
+				</array>
+			</dict>
+			<key>MainTemplateFiles</key>
+			<dict>
+				<key>SwiftUI</key>
+				<string>___FILEBASENAME___.swift</string>
+				<key>UIKit</key>
+				<string>___FILEBASENAME___.swift</string>
+			</dict>
+			<key>AllowedTypes</key>
+			<dict>
+				<key>SwiftUI</key>
+				<array>
+					<string>public.swift-source</string>
+				</array>
+				<key>UIKit</key>
+				<array>
+					<string>public.swift-source</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
